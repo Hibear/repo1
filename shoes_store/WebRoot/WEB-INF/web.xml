@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 管理员查询(杨雄)  -->
+  <servlet>
+  	<servlet-name>ManagerQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.managerinfo.ManagerQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ManagerQueryServlet</servlet-name>
+  <url-pattern>/sys/ManagerQueryServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 管理员增加(杨雄) -->
+  <servlet>
+  	<servlet-name>ManagerAddServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.managerinfo.ManagerAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ManagerAddServlet</servlet-name>
+  <url-pattern>/sys/ManagerAddServlet</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 管理员修改(杨雄)-->
+  <servlet>
+  	<servlet-name>ManagerUpdateServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.managerinfo.ManagerUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ManagerUpdateServlet</servlet-name>
+  <url-pattern>/sys/ManagerUpdateServlet</url-pattern>
+  </servlet-mapping>
+  
+    <!-- 管理员删除(杨雄)-->
+  <servlet>
+  	<servlet-name>ManagerDeleteServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.managerinfo.ManagerDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ManagerDeleteServlet</servlet-name>
+  <url-pattern>/sys/ManagerDeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 管理员登陆(杨雄)-->
+  <servlet>
+  	<servlet-name>ManagerLoginServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.managerinfo.ManagerLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ManagerLoginServlet</servlet-name>
+  <url-pattern>/sys/ManagerLoginServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 商品图片查询(杨雄)  -->
+  <servlet>
+  	<servlet-name>GoodsPictureQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.goodspictureinfo.GoodsPictureQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GoodsPictureQueryServlet</servlet-name>
+  <url-pattern>/sys/GoodsPictureQueryServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 图片增加 (杨雄)-->
+  <servlet>
+  	<servlet-name>GoodsPictureAddServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.goodspictureinfo.GoodsPictureAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GoodsPictureAddServlet</servlet-name>
+  <url-pattern>/sys/GoodsPictureAddServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 图片修改(杨雄) -->
+  <servlet>
+  	<servlet-name>GoodsPictureUpdateServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.goodspictureinfo.GoodsPictureUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GoodsPictureUpdateServlet</servlet-name>
+  <url-pattern>/sys/GoodsPictureUpdateServlet</url-pattern>
+  </servlet-mapping>
+  
+    <!-- 图片删除(杨雄)-->
+  <servlet>
+  	<servlet-name>GoodsPictureDeleteServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.goodspictureinfo.GoodsPictureDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GoodsPictureDeleteServlet</servlet-name>
+  <url-pattern>/sys/GoodsPictureDeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 评论查询(岳利)  -->
+  <servlet>
+  	<servlet-name>CommentsQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.commentsinfo.CommentsQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CommentsQueryServlet</servlet-name>
+  <url-pattern>/sys/CommentsQueryServlet</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 评论删除  (岳利) -->
+  <servlet>
+  	<servlet-name>CommentsDeleteServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.commentsinfo.CommentsDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CommentsDeleteServlet</servlet-name>
+  <url-pattern>/sys/CommentsDeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <!-- 商品类别查询(岳利)  -->
+  <servlet>
+  	<servlet-name>GoodsClassQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.goodsclassinfo.GoodsClassQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GoodsClassQueryServlet</servlet-name>
+  <url-pattern>/sys/GoodsClassQueryServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- 商品类别增加 (岳利)-->
+  <servlet>
+  	<servlet-name>GoodsClassAddServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.goodsclassinfo.GoodsClassAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GoodsClassAddServlet</servlet-name>
+  <url-pattern>/sys/GoodsClassAddServlet</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 商品类别修改(岳利)-->
+  <servlet>
+  	<servlet-name>GoodsClassUpdateServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.goodsclassinfo.GoodsClassUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GoodsClassUpdateServlet</servlet-name>
+  <url-pattern>/sys/GoodsClassUpdateServlet</url-pattern>
+  </servlet-mapping>
+  
+    <!-- 商品类别删除(岳利)-->
+  <servlet>
+  	<servlet-name>GoodsClassDeleteServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.goodsclassinfo.GoodsClassDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GoodsClassDeleteServlet</servlet-name>
+  <url-pattern>/sys/GoodsClassDeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 会员查询(曾微中)  -->
+  <servlet>
+  	<servlet-name>UserQuerySerlvet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.userinfo.UserQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserQuerySerlvet</servlet-name>
+  <url-pattern>/sys/UserQuerySerlvet</url-pattern>
+  </servlet-mapping>
+  
+ <!-- 会员增加（曾微中） -->
+  <servlet>
+  	<servlet-name>UserAddServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.userinfo.UserAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserAddServlet</servlet-name>
+  <url-pattern>/sys/UserAddServlet</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 会员修改（曾微中）-->
+  <servlet>
+  	<servlet-name>UserUpdateServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.userinfo.UserUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserUpdateServlet</servlet-name>
+  <url-pattern>/sys/UserUpdateServlet</url-pattern>
+  </servlet-mapping>
+  
+     <!-- 会员删除（曾微中）-->
+  <servlet>
+  	<servlet-name>UserDeleteServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.userinfo.UserDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserDeleteServlet</servlet-name>
+  <url-pattern>/sys/UserDeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 购物车查询(汪洪梅)-->
+  <servlet>
+  	<servlet-name>ShoppingcartQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.shoppingcartinfo.ShoppingcartQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ShoppingcartQueryServlet</servlet-name>
+  <url-pattern>/sys/ShoppingcartQueryServlet</url-pattern>
+  </servlet-mapping> 
+  
+    <!-- 订单查询 (刘钊)-->
+  <servlet>
+  	<servlet-name>OrderinfoQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.orderinfo.OrderinfoQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>OrderinfoQueryServlet</servlet-name>
+  <url-pattern>/sys/OrderinfoQueryServlet</url-pattern>
+  </servlet-mapping>
+   <!-- 订单增加(刘钊) -->
+  <servlet>
+  	<servlet-name>OrderinfoAddServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.orderinfo.OrderinfoAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>OrderinfoAddServlet</servlet-name>
+  <url-pattern>/sys/OrderinfoAddServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 订单修改(刘钊)-->
+  <servlet>
+  	<servlet-name>OrderinfoUpdateServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.orderinfo.OrderinfoUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>OrderinfoUpdateServlet</servlet-name>
+  <url-pattern>/sys/OrderinfoUpdateServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 订单删除(刘钊)-->
+  <servlet>
+  	<servlet-name>OrderinfoDeleteServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.orderinfo.OrderinfoDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>OrderinfoDeleteServlet</servlet-name>
+  <url-pattern>/sys/OrderinfoDeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+     <!-- 前台订单查询 (刘钊)-->
+  <servlet>
+  	<servlet-name>FOrderinfoQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.orderinfo.FOrderinfoQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FOrderinfoQueryServlet</servlet-name>
+  <url-pattern>/sys/FOrderinfoQueryServlet</url-pattern>
+  </servlet-mapping>
+   <!-- 前台订单增加(刘钊) -->
+  <servlet>
+  	<servlet-name>FOrderinfoAddServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.orderinfo.FOrderinfoAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FOrderinfoAddServlet</servlet-name>
+  <url-pattern>/sys/FOrderinfoAddServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 前台订单修改(刘钊)-->
+  <servlet>
+  	<servlet-name>FOrderinfoUpdateServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.orderinfo.FOrderinfoUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FOrderinfoUpdateServlet</servlet-name>
+  <url-pattern>/sys/FOrderinfoUpdateServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 前台订单删除(刘钊)-->
+  <servlet>
+  	<servlet-name>FOrderinfoDeleteServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.orderinfo.FOrderinfoDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FOrderinfoDeleteServlet</servlet-name>
+  <url-pattern>/sys/FOrderinfoDeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- 商品查询 (刘钊)-->
+  <servlet>
+  	<servlet-name>GoodsinfoQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.goodsinfo.GoodsinfoQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GoodsinfoQueryServlet</servlet-name>
+  <url-pattern>/sys/GoodsinfoQueryServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 商品增加 (刘钊)-->
+  <servlet>
+  	<servlet-name>GoodsinfoAddServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.goodsinfo.GoodsinfoAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GoodsinfoAddServlet</servlet-name>
+  <url-pattern>/sys/GoodsinfoAddServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 商品修改(刘钊)-->
+  <servlet>
+  	<servlet-name>GoodsinfoUpdateServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.goodsinfo.GoodsinfoUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GoodsinfoUpdateServlet</servlet-name>
+  <url-pattern>/sys/GoodsinfoUpdateServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 商品删除(刘钊)-->
+  <servlet>
+  	<servlet-name>GoodsinfoDeleteServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.goodsinfo.GoodsinfoDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>GoodsinfoDeleteServlet</servlet-name>
+  <url-pattern>/sys/GoodsinfoDeleteServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 商品进货查询 (刘钊)-->
+  <servlet>
+  	<servlet-name>ReceiptinfoQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.receiptinfo.ReceiptinfoQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ReceiptinfoQueryServlet</servlet-name>
+  <url-pattern>/sys/ReceiptinfoQueryServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 商品进货增加(刘钊) -->
+  <servlet>
+  	<servlet-name>ReceiptinfoAddServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.receiptinfo.ReceiptinfoAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ReceiptinfoAddServlet</servlet-name>
+  <url-pattern>/sys/ReceiptinfoAddServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 商品进货修改(刘钊)-->
+  <servlet>
+  	<servlet-name>ReceiptinfoUpdateServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.receiptinfo.ReceiptinfoUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ReceiptinfoUpdateServlet</servlet-name>
+  <url-pattern>/sys/ReceiptinfoUpdateServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 商品进货删除(刘钊)-->
+  <servlet>
+  	<servlet-name>ReceiptinfoDeleteServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.receiptinfo.ReceiptinfoDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ReceiptinfoDeleteServlet</servlet-name>
+  <url-pattern>/sys/ReceiptinfoDeleteServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 图片查询 (刘钊)-->
+  <servlet>
+  	<servlet-name>FGoodsPictureQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.goodspictureinfo.FGoodsPictureQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FGoodsPictureQueryServlet</servlet-name>
+  <url-pattern>/sys/FGoodsPictureQueryServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 图片时尚女鞋查询 (刘钊)-->
+  <servlet>
+  	<servlet-name>FFashionshoesQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.goodspictureinfo.FFashionshoesQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FFashionshoesQueryServlet</servlet-name>
+  <url-pattern>/sys/FFashionshoesQueryServlet</url-pattern>
+  </servlet-mapping>
+   <!-- 图片时尚男鞋查询 (刘钊)-->
+  <servlet>
+  	<servlet-name>FMenfashionshoesQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.goodspictureinfo.FMenfashionshoesQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FMenfashionshoesQueryServlet</servlet-name>
+  <url-pattern>/sys/FMenfashionshoesQueryServlet</url-pattern>
+  </servlet-mapping>
+  <!-- 图片运动潮流查询 (刘钊)-->
+  <servlet>
+  	<servlet-name>FSportstrendshoesQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.goodspictureinfo.FSportstrendshoesQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FSportstrendshoesQueryServlet</servlet-name>
+  <url-pattern>/sys/FSportstrendshoesQueryServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- 会员注册 (杨雄)-->
+  <servlet>
+  	<servlet-name>FUserSignInServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.signin.FUserSignInServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FUserSignInServlet</servlet-name>
+  <url-pattern>/sys/FUserSignInServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 品牌馆图片查询 (杨雄)-->
+  <servlet>
+  	<servlet-name>FBrandQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.brandinfo.FBrandQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FBrandQueryServlet</servlet-name>
+  <url-pattern>/sys/FBrandQueryServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 单件商品的查询 (杨雄)-->
+  <servlet>
+  	<servlet-name>DepartGoodsServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.departgoodsinfo.DepartGoodsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>DepartGoodsServlet</servlet-name>
+  <url-pattern>/sys/DepartGoodsServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 许多商品的查询 (杨雄)-->
+  <servlet>
+  	<servlet-name>ManyGoodsServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.manygoodsinfo.ManyGoodsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ManyGoodsServlet</servlet-name>
+  <url-pattern>/sys/ManyGoodsServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 用户登录 (杨雄)-->
+  <servlet>
+  	<servlet-name>FUserLoginServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.login.FUserLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FUserLoginServlet</servlet-name>
+  <url-pattern>/sys/FUserLoginServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 购物车的添加 (杨雄)-->
+  <servlet>
+  	<servlet-name>FShoppingCartAddServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.shoppingcartinfo.FShoppingCartAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FShoppingCartAddServlet</servlet-name>
+  <url-pattern>/sys/FShoppingCartAddServlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 购物车的查询 (杨雄)-->
+  <servlet>
+  	<servlet-name>FShoppingCartQueryServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.shoppingcartinfo.FShoppingCartQueryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FShoppingCartQueryServlet</servlet-name>
+  <url-pattern>/sys/FShoppingCartQueryServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+     <!-- 评论增加(刘钊) -->
+  <servlet>
+  	<servlet-name>CommentsAddServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.system.commentsinfo.CommentsAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CommentsAddServlet</servlet-name>
+  <url-pattern>/sys/CommentsAddServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- 用户的退出 (杨雄)-->
+  <servlet>
+  	<servlet-name>FUserClearServlet</servlet-name>
+  	<servlet-class>com.sstore.web.serlvet.front.login.FUserClearServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FUserClearServlet</servlet-name>
+  <url-pattern>/sys/FUserClearServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
